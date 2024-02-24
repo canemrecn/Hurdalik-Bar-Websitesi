@@ -1,0 +1,90 @@
+body {
+    background-image: url('42.jpg'); /* Resmin dosya yolunu belirtin */
+    background-size: cover; /* Resmi sayfanın tamamını kaplayacak şekilde ölçeklendir */
+    background-repeat: no-repeat; /* Resmin tekrarlanmasını engelle */
+    background-attachment: fixed; /* Resmi sayfada sabit bir konumda tut */
+    background-position: center center; /* Resmi sayfanın ortasında hizala */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+/* Metni kaydırma animasyonunu tanımla */
+.animate-me {
+    animation: slide-left 20s linear infinite; /* Animasyonu tanımlar */
+    padding: 20px; /* Metin içeriğine biraz padding ekler */
+    position: fixed; /* Sabit pozisyon kullan */
+    top: 0;
+    right: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+/* Sepet stilini belirtin */
+.cart {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 115px;
+    left: 0;
+}
+/* Kaydırma animasyonunu belirtin */
+@keyframes slide-left {
+    0% {
+        right: 100%; /* Başlangıçta sağ üst köşede */
+    }
+    100% {
+        right: 0; /* Sonunda sol üst köşeye kaydırılmış */
+    }
+}
+p{
+    color: #B67A58;
+}
+.btn-custom {
+    background-color: rgb(255, 255, 255); /* Gri arka plan rengi */
+    border-color: rgb(0, 0, 0);     /* Gri kenarlık rengi */
+    color: rgb(0, 0, 0);           /* Beyaz metin rengi */
+}
+.btn-custom:hover {
+    background-color: rgb(0, 81, 255); /* Gri butona fare üzeri geldiğinde arka plan rengini değiştirin */
+    border-color: rgb(0, 81, 255);     /* Gri butona fare üzeri geldiğinde kenarlık rengini değiştirin */
+    color: rgb(255, 255, 255);               /* Beyaz metin rengini fare üzeri geldiğinde değiştirin */
+}
+.btn-outline-danger{
+    background-color: rgb(255, 255, 255); /* Gri arka plan rengi */
+    border-color: rgb(0, 0, 0);     /* Gri kenarlık rengi */
+    color: rgb(0, 0, 0);           /* Beyaz metin rengi */
+}
+.btn-outline-danger:hover {
+    background-color: rgb(255, 79, 79); /* Gri butona fare üzeri geldiğinde arka plan rengini değiştirin */
+    border-color: rgb(255, 79, 79);     /* Gri butona fare üzeri geldiğinde kenarlık rengini değiştirin */
+    color: rgb(255, 255, 255);               /* Beyaz metin rengini fare üzeri geldiğinde değiştirin */
+}
+.underlined {
+    text-decoration: underline; /* Metin altını çizmek için text-decoration özelliğini kullanın */
+    color: white;
+}
+#dark-image {
+    filter: brightness(0%);
+    transition: filter 3s ease;
+    position: fixed; /* Resmi sabitlemek için 'position' özelliğini kullanıyoruz */
+    bottom: 0; /* Resmi alt kenara sabitliyoruz */
+    right: 0; /* Resmi sağ kenara sabitliyoruz */
+    margin: 10px; /* Sağ alt köşeden biraz içeriye kaydırabilirsiniz */
+}
+.image-container:hover #dark-image {
+    filter: brightness(100%); /* Fare üzerine geldiğinde resmi aydınlatmak için 'brightness' özelliğini 100% yapıyoruz */
+}
+#dark-image1 {
+    filter: brightness(0%);
+    transition: filter 3s ease;
+    position: fixed;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.image-container:hover #dark-image1 {
+    filter: brightness(100%); /* Fare üzerine geldiğinde resmi aydınlatmak için 'brightness' özelliğini 100% yapıyoruz */
+}
